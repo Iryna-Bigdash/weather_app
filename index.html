@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./crs/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="weather-app">
+         
+            <div class="search-form-container">
+                <h2 class="call-to-action">Type a city or choose current location</h2>
+            <form id="search-form">
+                    <input 
+                        type="text" 
+                        placeholder="Type a city here.." 
+                        autofocus="on"
+                        autocomplete="off"
+                        id="city-input"
+                        class="city-input">
+               
+                        <button
+                        type="submit" 
+                        value="🔎 Search"  
+                        id="city-input"
+                        class="search-button">Search</button>
+
+                        <button id="current-location-button" class="search-button">Location</button>
+            </form>  
+        </div>
+
+            <div class="current-city-container">
+                    <h2 id="current-city" class="current-city-name"></h2>
+                    <p class="secondsry-color" id="current-date" class="current-date">
+                        Today: 10 October 2022 Monday</p>
+                    <ul>
+                        <li class="humidity">Humidity: <span
+                            id="humidity">0</span>%</li>
+                        <li class="wind-speed">Wind: <span
+                            id="wind">7</span>km/h</li>
+                    </ul>
+                </div>
+
+
+                    <div class="city-card">
+                        <h1 class="city-name"><span id="city"></span>
+                            <span id="temperature"></span>
+                            <span class="units">°C | <a href="#" id="fahrenheit-link">°F</a> 
+                            </span>
+                        </h1>
+                        <ul>
+                            <li>↓<span id="min-temperature"></span>°  ↑<span id="max-temperature"></span>°</li>
+                            <li id="temperature-description" class="description">Partly Cloudy</li>
+                            <li class="secondsry-color recomendation">Don’t forget to take a good mood!</li>
+                        </ul>
+                        <div class="scena">
+                            <svg class="card-icon">
+                        <use href="./image/symbol-defs.svg#icon-sun"></use>
+                            </svg>
+                    </div>
+                   </div>
+           
+        
+                <section class="per-hour-temperature">
+                    <div class="row">
+                        <div class="col-1"></div>
+                            <ul>
+                                <li>
+                                    <h3>10:00</h3>
+                                    <img src="./image/🌞.svg" alt="Sun" class="city-card-img">
+                                    <p>18°</p>
+                                </li>
+                                <li>
+                                    <h3>11:00</h3>
+                                    <img src="./image/🌤️.svg" alt="Partly Cloudy">
+                                    <p>19°</p>
+                                </li>
+                                <li>
+                                    <h3>12:00</h3>
+                                    <img src="./image/🌤️.svg" alt="Partly Cloudy">
+                                    <p>20°</p>
+                                </li>
+                                <li>
+                                    <h3>13:00</h3>
+                                    <img src="./image/🌤️.svg" alt="Partly Cloudy">
+                                    <p>20°</p>
+                                </li>
+                                <li>
+                                    <h3>14:00</h3>
+                                    <img src="./image/🌞.svg" alt="Sun">
+                                    <p>21°</p>
+                                </li>
+                                <li>
+                                    <h3>15:00</h3>
+                                    <img src="./image/🌞.svg" alt="Sun">
+                                    <p>21°</p>
+                                </li>
+                                <li>
+                                    <h3>16:00</h3>
+                                    <img src="./image/🌞.svg" alt="Sun">
+                                    <p>21°</p>
+                                </li>
+                                <li>
+                                    <h3>17:00</h3>
+                                    <img src="./image/🌤️.svg" alt="Partly Cloudy">
+                                    <p>20°</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="dayly-temperature">
+                    <div class="dayly-temperature-container">
+                        <div class="box">
+                        <ul>
+                            <li>
+                                <h3>Tuesday</h3>
+                                <hr>
+                                <p>↓15° ↑21° </p>
+                                <img src="./image/🌤️.svg" alt="Partly Cloudy" width="123px" height="123px">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <ul>
+                            <li>
+                                <h3>Wednesday</h3>
+                                <hr>
+                                <p>↓16° ↑20° </p>
+                                <img src="./image/☁️.svg" alt="" width="123px" height="123px">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <ul>
+                            <li>
+                                <h3>Thusday</h3>
+                                <hr>
+                                <p>↓15° ↑22° </p>
+                                <img src="./image/Frame 1 — копия.svg" alt="" width="123px" height="123px">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <ul>
+                            <li>
+                                <h3>Friday</h3>
+                                <hr>
+                                <p>↓15° ↑20° </p>
+                                <img src="./image/rain.svg" alt="" width="123px" height="123px">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box">
+                        <ul>
+                            <li>
+                                <h3>Saturday</h3>
+                                <hr>
+                                <p>↓16° ↑26° </p>
+                                <img src="./image/🌞.svg" alt="" width="123px" height="123px">
+                            </li>
+                        </ul>
+                    </div>
+             </section>
+         </div>
+    </div>
+    <script src="./crs/st.js"></script>
+
+</body>
+
+</html>

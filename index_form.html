@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="./crs/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather-app">
+            <form id="search-form">
+                <div class="row">
+                    
+                    <div class="col-3">
+                        <input 
+                        type="search" 
+                        placeholder="Type a city.." 
+                        autofocus="on"
+                        autocomplete="off"
+                        class="form-control shadow-sm" 
+                        id="city-input" >
+                    </div>
+
+                    <div class="col-2">
+                        <input 
+                        type="submit" 
+                        value="Search"  
+                        id="city-input"
+                        class="form-control btn btn-primary shadow-sm">
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col-6">
+                    <br>
+                    <h2 id="city" class="city-name">Lisbon, Portugal</h2>
+                    <!-- <p class="secondsry-color" id="current-date">Today: 10 October 2022 Monday</p> -->
+                    <ul>
+                        <li class="secondsry-color">Precipitation: 0%</li>
+                        <li class="secondsry-color">Humidity: 77%</li>
+                        <li class="secondsry-color">Wind: 6 km/h</li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <div class="city-card">
+                        <h2 class="city-name"> Lisbon 18°C </h2>
+                        <ul>
+                            <li>↓15° ↑21°</li>
+                            <li>Partly Cloudy</li>
+                            <li class="secondsry-color recomendation">Don’t forget to take a good mood!</li>
+                        </ul>
+                        <img src="./image/🌤️.svg" alt="">
+                    </div>
+                </div>
+
+
+                <div class="scane">
+              
+                    <img src="./image/🌞.svg" alt="" height="300" width="300" class="sun">
+
+            </div>
+
+
+                <script>
+                    function search(event) {
+                        event.preventDefault();
+                        let cityElement = document.querySelector("#city");
+                        cityElement.innerHTML = "Paris";
+                        let cityInput = document.querySelector("#city-input");
+                        cityElement.innerHTML = cityInput.value;
+                    }
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", search);
+
+
+
+                </script>
+            </body>
+</html>
