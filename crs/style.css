@@ -7,6 +7,7 @@
     border: 3px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
+    margin: 30px auto;
 }
 
 h1,
@@ -74,8 +75,14 @@ color: #4B3E79;
 border: 2px solid  #FFFFFF;
 border-radius: 4px;
 background-color: #ACDFFC;
+cursor: pointer;
 }
-
+.search-button:hover,
+.search-button:hover {
+    background-color: #FFFFFF;
+    color: #4B3E79;
+    border-color: #4B3E79;
+}
 
 .current-city-container {
     width: 600px;
@@ -101,6 +108,23 @@ background-color: #ACDFFC;
     border-radius: 40px;
     margin-right: 60px;
 }
+.city-card h1{
+    color: #FFFFFF;
+}
+
+.card-temperature{
+    font-size: 32px;
+    line-height: 1.2;
+    color: #4B3E79;
+    opacity: 0.7;
+}
+.description {
+    font-size: 32px;
+    line-height: 1.2;
+    color: #4B3E79;
+    opacity: 0.7; 
+}
+
 .card-icon {
     position: absolute;
     top: 50px;
@@ -108,8 +132,17 @@ background-color: #ACDFFC;
     fill: rgb(188, 147, 72);
 }
 
-
-
+.units {
+    position: relative;
+    top: -22px;
+    left: -10px;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.units a {
+text-decoration: none;
+color: #FFFFFF;
+}
 
 /* .weather-app .form-control {
     height: 30px;
