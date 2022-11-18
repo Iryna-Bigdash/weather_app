@@ -123,6 +123,17 @@ cursor: pointer;
 .city-card h1{
     color: #FFFFFF;
 }
+.city-card a {
+    text-decoration: none;
+}
+
+.active {
+    color: #FFFFFF;
+    cursor: default; 
+}
+.active:hover {
+    text-decoration: none;
+}
 
 .card-temperature{
     font-size: 32px;
@@ -163,10 +174,9 @@ cursor: pointer;
     font-size: 30px;
     color: #FFFFFF;
 }
-.units a {
+/* .units a {
 text-decoration: none;
-color: #FFFFFF;
-}
+color: #FFFFFF; */
 
 /* .weather-app .form-control {
     height: 30px;
