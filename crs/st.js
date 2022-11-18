@@ -12,6 +12,7 @@ let day = days[now.getDay()];
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 let month = months[now.getMonth()];
 curretDate.innerHTML = `Today: ${day} ${month} ${date}, ${hours}:${minutes}`
+let iconElement = document.querySelector("#icon");
 
 
 function displayWeatherCondition(response){
@@ -24,6 +25,8 @@ function displayWeatherCondition(response){
     document.querySelector("#min-temperature").innerHTML = Math.round(response.data.main.temp_min);
     document.querySelector("#max-temperature").innerHTML = Math.round(response.data.main.temp_max);
     document.querySelector("#current-city").innerHTML = response.data.name;
+    iconElement.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {

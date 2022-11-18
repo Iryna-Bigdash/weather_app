@@ -3,11 +3,16 @@
     padding: 60px;
     max-width: 1200px;
     padding: 30px 15px;
-    background: #ACDFFC;
+    /* background: #ACDFFC; */
     border: 3px solid #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     margin: 30px auto;
+    /* background: linear-gradient(180deg, #CDEDFF 0%, #FCFDFF 35.94%, #FBFBFB 67.19%, #C1DEF5 100%); */
+    background: linear-gradient(180deg, #bce3fa 0%, #e3ebf9 35.94%, #bce3fa 67.19%, #bfdbf1 100%);
+
+    /* background: linear-gradient(180deg, #a6c4f0 0%, rgba(208, 239, 162, 0) 100%); */
+   
 }
 
 h1,
@@ -29,6 +34,9 @@ body {
     line-height: 1.25;
     letter-spacing: 0.03em;
     font-family: 'Roboto', sans-serif;
+    background: linear-gradient(180deg, #3981EE 0%, rgba(206, 236, 253, 0) 100%);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    /* background: linear-gradient(180deg, #CDEDFF 0%, #FCFDFF 35.94%, #FBFBFB 67.19%, #C1DEF5 100%); */
 }
 
 .call-to-action {
@@ -45,6 +53,7 @@ margin-bottom: 20px;
     width: 600px;
     height: 100px;
     padding: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .city-input {
@@ -54,7 +63,8 @@ padding: 5px 20px;
 font-size: 18px;
 line-height: 1.25;
 letter-spacing: 0.03em;
-border-radius: 2px;
+border-radius: 10px;
+border:none;
 }
 
 .search-button {
@@ -73,8 +83,8 @@ text-align: center;
 align-items: center;
 color: #4B3E79;
 border: 2px solid  #FFFFFF;
-border-radius: 4px;
-background-color: #ACDFFC;
+border-radius: 5px;
+background: linear-gradient(180deg, #92BDFF 0%, rgba(217, 217, 217, 0) 100%);
 cursor: pointer;
 }
 .search-button:hover,
@@ -88,6 +98,7 @@ cursor: pointer;
     width: 600px;
     padding: 20px;
     margin-bottom: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
 }
 
 .current-city-name {
@@ -107,6 +118,7 @@ cursor: pointer;
     border: 3px solid #FFFFFF;
     border-radius: 40px;
     margin-right: 60px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .city-card h1{
     color: #FFFFFF;
@@ -125,11 +137,23 @@ cursor: pointer;
     opacity: 0.7; 
 }
 
-.card-icon {
+.scena {
+    display: block;
+  
+    width: 150px;
+    height: 150px;
     position: absolute;
-    top: 50px;
-    right: -50px;
-    fill: rgb(188, 147, 72);
+    top: 20px;
+    right: 20px;
+}
+
+.card-icon {  
+  position:absolute;
+    width: 140px;
+    height: 140px;
+    top: 123px;
+    right: 215px;
+   
 }
 
 .units {
