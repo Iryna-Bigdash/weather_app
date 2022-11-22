@@ -12,6 +12,11 @@ let month = months[now.getMonth()];
 curretDate.innerHTML = `Today: ${day} ${month} ${date}, ${hours}:${minutes}`
 let iconElement = document.querySelector("#icon");
 
+function displayForecast() {
+    let forecastElement = Document.querySelector("#forecast");
+    forecastElement.innerHTML = "Hello"
+}
+
 
 function displayWeatherCondition(response){
     // console.log(response.data);
@@ -84,6 +89,30 @@ function displayCelsiusTemperature(event) {
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature); 
 }
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="dayly-temperature__box">`;
+
+    let days = ["Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
+    days.forEach(function(day) {
+    forecastHTML = forecastHTML + `
+        <li class="dayly-temperature__item">
+    <h3 class="dayly-temperature__title">${day}</h3>
+    <p class="dayly-temperature__line"></p>
+    <img class="dayly-temperature__img" src="./image/🌤️.svg" alt="Partly Cloudy" width="120px" height="120px">
+    <p class="dayly-temperature__min-max">
+    ↓<span class="min-dayly-temperature">15°</span>
+    ↑<span class="max-dayly-temperature">21°</span>
+    </p>
+    </li>
+    `;
+});
+    forecastHTML = forecastHTML + `</div>`
+    forecastElement.innerHTML = forecastHTML;
+}
+
+
+
 
 let celsiusTemperature = null;
 
@@ -100,6 +129,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
+displayForecast();
 
 
 

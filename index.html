@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather</title>
+    <link rel="stylesheet" href="./crs/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./crs/style.css">
+
 </head>
 
 <body>
@@ -18,8 +20,8 @@
     <div class="container">
 
         <div class="weather-app">
-         
-            
+
+
             <div class="search-form-container">
                 <h2 class="call-to-action">Type a city or choose current location</h2>
                 <form id="search-form">
@@ -67,30 +69,45 @@
 
             <section class="dayly-temperature">
                 <div class="dayly-temperature__container">
-                    <ul class="dayly-temperature__list">
+                    <ul class="dayly-temperature__list" id="forecast">
+                        <div class="dayly-temperature__box">
 
-                        <li class="dayly-temperature__item">
-                            <h3 class="dayly-temperature__title">Tuesday</h3>
+                        <!-- <li class="dayly-temperature__item"> -->
+
+
+                    
+                            <!-- <div class="forecast-conteiner"> -->
+
+                            <!-- <h3 class="dayly-temperature__title">Tuesday</h3>
                             <p class="dayly-temperature__line"></p>
-                            <img class="dayly-temperature__img" src="./image/🌤️.svg" alt="Partly Cloudy" width="120px"
-                                height="120px">
-                            <p class="dayly-temperature__min-max">↓15° ↑21° </p>
-                        </li>
+                            <img class="dayly-temperature__img" src="./image/🌤️.svg" alt="Partly Cloudy" width="110px"
+                                height="110px">
+                                <p class="dayly-temperature__min-max">
+                                    ↓<span class="min-dayly-temperature">15°</span>
+                                    ↑<span class="max-dayly-temperature">21°</span>
+                                </p> -->
+                            <!-- </li> -->
+                            </div>
 
-                        <li class="dayly-temperature__item">
+                        <!-- <li class="dayly-temperature__item">
                             <h3 class="dayly-temperature__title">Wednesday</h3>
                             <p class="dayly-temperature__line"></p>
                             <img class="dayly-temperature__img" src="./image/☁️.svg" alt="Partly Cloudy" width="120px"
                                 height="120px">
-                            <p class="dayly-temperature__min-max">↓15° ↑21° </p>
-                        </li>
+                                <p class="dayly-temperature__min-max">
+                                    ↓<span class="min-dayly-temperature">15°</span>
+                                    ↑<span class="max-dayly-temperature">21°</span>
+                                </p>
+                            </li>
 
                         <li class="dayly-temperature__item">
                             <h3 class="dayly-temperature__title">Thusday</h3>
                             <p class="dayly-temperature__line"></p>
                             <img class="dayly-temperature__img" src="./image/Frame 1 — копия.svg" alt="Partly Cloudy"
                                 width="120px" height="120px">
-                            <p class="dayly-temperature__min-max">↓15° ↑21° </p>
+                            <p class="dayly-temperature__min-max">
+                                ↓<span class="min-dayly-temperature">15°</span>
+                                ↑<span class="max-dayly-temperature">21°</span></p>
                         </li>
 
                         <li class="dayly-temperature__item">
@@ -98,7 +115,10 @@
                             <p class="dayly-temperature__line"></p>
                             <img class="dayly-temperature__img" src="./image/rain.svg" alt="Partly Cloudy" width="120px"
                                 height="120px">
-                            <p class="dayly-temperature__min-max">↓15° ↑21° </p>
+                                <p class="dayly-temperature__min-max">
+                                    ↓<span class="min-dayly-temperature">15°</span>
+                                    ↑<span class="max-dayly-temperature">21°</span>
+                                </p>
                         </li>
 
                         <li class="dayly-temperature__item">
@@ -106,8 +126,11 @@
                             <p class="dayly-temperature__line"></p>
                             <img class="dayly-temperature__img" src="./image/🌞.svg" alt="Partly Cloudy" width="120px"
                                 height="120px">
-                            <p class="dayly-temperature__min-max">↓15° ↑21° </p>
-                        </li>
+                            <p class="dayly-temperature__min-max">
+                                ↓<span class="min-dayly-temperature">15°</span>
+                                ↑<span class="max-dayly-temperature">21°</span>
+                            </p>
+                        </li> -->
                     </ul>
                 </div>
             </section>
@@ -120,7 +143,7 @@
 
 
 
-            <!-- <section class="per-hour-temperature">
+    <!-- <section class="per-hour-temperature">
                     <div class="row">
                         <div class="col-1"></div>
                             <ul>
