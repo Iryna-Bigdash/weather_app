@@ -16,20 +16,14 @@
 </head>
 
 <body>
-
     <div class="container">
-
         <div class="weather-app">
-
-
             <div class="search-form-container">
                 <h2 class="call-to-action">Type a city or choose current location</h2>
                 <form id="search-form">
                     <input type="text" placeholder="Type a city here.." autofocus="on" autocomplete="off"
                         id="city-input" class="city-input">
-
                     <button type="submit" value="🔎 Search" id="city-input" class="search-button">Search</button>
-
                     <button id="current-location-button" class="search-button">Location</button>
                 </form>
             </div>
@@ -57,13 +51,13 @@
                     </span>
                 </h1>
 
-                <ul class="card__list">
-                    <li class="card-temperature">↓<span id="min-temperature"></span>° ↑<span
-                            id="max-temperature"></span>°</li>
-                    <li id="temperature-description" class="description">Partly Cloudy</li>
+                <div class="card__list">
+                    <p class="card-temperature">↓<span id="min-temperature"></span>° ↑<span
+                            id="max-temperature"></span>°</p>
+                    <p id="temperature-description" class="description">Partly Cloudy</p>
                     <br>
-                    <li class="secondsry-color recomendation">Don’t forget to take a good mood!</li>
-                </ul>
+                    <p class="secondsry-color recomendation">Don’t forget to take a good mood! 🙂</p>
+                </div>
                 <img src="" alt="" class="card-icon" id="icon">
             </div>
 
@@ -135,7 +129,7 @@
                 </div>
             </section>
             <h4>
-                Coded by <span class="dev"><a href="https://github.com/Iryna-Bigdash/weather_app"></span>Iryna
+                Coded by <span class="dev"><a href="https://github.com/Iryna-Bigdash/weather_app"class="dev__link"></span>Iryna
                 Bigdash</a>
             </h4>
         </div>

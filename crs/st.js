@@ -1,4 +1,3 @@
-
 let now = new Date();
 let curretDate = document.querySelector("#current-date")
 let date = now.getDate();
@@ -66,18 +65,6 @@ function getCurrentLocation(event) {
     navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-
-// function convertToFahrenheit(event) {
-//     event.preventDefault();
-//     let temperatureElement = document.querySelector("#temperature");
-//     let temperature = temperatureElement.innerHTML;
-//     temperature = Number(temperature);
-//     temperatureElement.innerHTML = Math.round((temperature * 9) / 5 + 32);
-// }
-
-// let fahrenheitLink = document.querySelector("#fahrenheit-link");
-// fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
 function displayFahrenheitTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");  
@@ -85,7 +72,6 @@ function displayFahrenheitTemperature(event) {
     celsiusLink.classList.remove("active");
     fahrenheitLink.classList.add("active");
    
-    
     let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature); 
 }
@@ -96,32 +82,17 @@ function displayCelsiusTemperature(event) {
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature); 
 }
-
-// function displayForecast(response) {
-//     // console.log(response.data.daily);
-//     let forecast = response.data.daily;
-
-//     let forecastElement = Document.querySelector("#forecast");
-    
-// }
-
-   
-
-
 function formatDay(timestamp) {
     let date = new Date (timestamp * 1000);
     let day = date.getDay();
     let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
     return days[day];
 }
-
-
 function displayForecast(response) {
     let forecast = response.data.daily;
     console.log(response.data.daily);
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML = `<div class="dayly-temperature__box">`;
-    // let days = ["Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
     forecast.forEach(function(forecastDay, index) {
         if (index<6) {
     forecastHTML = 
@@ -144,9 +115,6 @@ function displayForecast(response) {
     forecastElement.innerHTML = forecastHTML;
 }
 
-
-
-
 let celsiusTemperature = null;
 
 let searchForm = document.querySelector("#search-form");
@@ -162,32 +130,3 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
