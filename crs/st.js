@@ -12,9 +12,12 @@ let month = months[now.getMonth()];
 curretDate.innerHTML = `Today: ${day} ${month} ${date}, ${hours}:${minutes}`
 let iconElement = document.querySelector("#icon");
 
-function displayForecast() {
-    let forecastElement = Document.querySelector("#forecast");
-    forecastElement.innerHTML = "Hello"
+
+function getForecast(coordinates) {
+console.log(coordinates);
+let apiKey = "fb78b5cbo1fdf35t140380a70f3a9d98";
+let apiUrl =`https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${apiKey}&units=metric`;
+axios.get(apiUrl).then(displayForecast);
 }
 
 
@@ -32,6 +35,10 @@ function displayWeatherCondition(response){
     iconElement.setAttribute("alt", response.data.weather[0].description);
 
     celsiusTemperature = response.data.main.temp;
+
+getForecast(response.data.coord);
+
+
 }
 
 function searchCity(city) {
@@ -89,23 +96,49 @@ function displayCelsiusTemperature(event) {
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(celsiusTemperature); 
 }
-function displayForecast() {
+
+// function displayForecast(response) {
+//     // console.log(response.data.daily);
+//     let forecast = response.data.daily;
+
+//     let forecastElement = Document.querySelector("#forecast");
+    
+// }
+
+   
+
+
+function formatDay(timestamp) {
+    let date = new Date (timestamp * 1000);
+    let day = date.getDay();
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
+    return days[day];
+}
+
+
+function displayForecast(response) {
+    let forecast = response.data.daily;
+    console.log(response.data.daily);
     let forecastElement = document.querySelector("#forecast");
     let forecastHTML = `<div class="dayly-temperature__box">`;
-
-    let days = ["Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
-    days.forEach(function(day) {
-    forecastHTML = forecastHTML + `
+    // let days = ["Tuesday", "Wednesday", "Thusday", "Friday", "Saturday"];
+    forecast.forEach(function(forecastDay, index) {
+        if (index<6) {
+    forecastHTML = 
+    forecastHTML + `
         <li class="dayly-temperature__item">
-    <h3 class="dayly-temperature__title">${day}</h3>
+    <h3 class="dayly-temperature__title">${formatDay(forecastDay.time)}</h3>
     <p class="dayly-temperature__line"></p>
-    <img class="dayly-temperature__img" src="./image/🌤️.svg" alt="Partly Cloudy" width="120px" height="120px">
+    <img class="dayly-temperature__img"
+    src='${forecastDay.condition.icon_url}'
+   width="120px" height="120px">
     <p class="dayly-temperature__min-max">
-    ↓<span class="min-dayly-temperature">15°</span>
-    ↑<span class="max-dayly-temperature">21°</span>
+    ↓<span class="min-dayly-temperature">${Math.round(forecastDay.temperature.minimum)}°</span>
+    ↑<span class="max-dayly-temperature">${Math.round(forecastDay.temperature.maximum)}°</span>
     </p>
     </li>
     `;
+        }
 });
     forecastHTML = forecastHTML + `</div>`
     forecastElement.innerHTML = forecastHTML;
@@ -129,7 +162,7 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 searchCity("New York");
-displayForecast();
+
 
 
 
