@@ -1,36 +1,37 @@
 .current-city__block {
-    padding: 0;
+    
+    padding-top: 20px;
 }
 .call-to-action {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     color: #FFFFFF;
     }
     .city-input {
     min-width: 300px;
   
     padding: 5px 10px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
     border-radius: 5px;
     border:none;
     outline: none;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     }
     .city-input:hover,
     .city-input:focus {
     outline: 1px solid #3981EE;
     }   
     .search-button {
-    width: 100px; 
+    width: 80px; 
     padding: 5px;
     
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.25;
     letter-spacing: 0.03em;
     

@@ -1,7 +1,7 @@
 .city-card {
     position: relative;
-    min-width: 400px;
-    min-height: 150px;
+    width: 320px;
+    min-height: 100px;
     padding: 30px;
 
     background: linear-gradient(180deg, #3981EE 0%, rgba(206, 236, 253, 0) 100%);
@@ -28,10 +28,11 @@
     font-size: 23px;
     line-height: 1.2;
     color: #4B3E79;
+    margin-top: 20px;
 }
 
 .description {
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 20px;
     line-height: 1.2;
     color: #4B3E79;
@@ -39,8 +40,8 @@
 }
 
 .recomendation {
-    margin-top: 30px;
-    font-size: 20px;
+    margin-top: 40px;
+    font-size: 16px;
     opacity: 0.7;
     color: #FFFFFF;
 }
@@ -48,8 +49,8 @@
     position: absolute ; 
     min-width: 150px;
     min-height: 150px;
-    top: -5px;
-    left: 250px;
+    top: 40px;
+    left: 220px;
 }
 .units {
     position: relative;
