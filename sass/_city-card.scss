@@ -1,0 +1,60 @@
+.city-card {
+    position: relative;
+    min-width: 400px;
+    min-height: 150px;
+    padding: 30px;
+
+    background: linear-gradient(180deg, #3981EE 0%, rgba(206, 236, 253, 0) 100%);
+    border: 3px solid #FFFFFF;
+    border-radius: 40px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.city-card h1{
+    color: #FFFFFF;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.city-card a {
+    text-decoration: none;
+}
+.active {
+    color: #FFFFFF;
+    cursor: default; 
+}
+.active:hover {
+    text-decoration: none;
+}
+.card-temperature{
+    font-size: 23px;
+    line-height: 1.2;
+    color: #4B3E79;
+}
+
+.description {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #4B3E79;
+    text-transform: capitalize;
+}
+
+.recomendation {
+    margin-top: 30px;
+    font-size: 20px;
+    opacity: 0.7;
+    color: #FFFFFF;
+}
+.card-icon {
+    position: absolute ; 
+    min-width: 150px;
+    min-height: 150px;
+    top: -5px;
+    left: 250px;
+}
+.units {
+    position: relative;
+    top: -22px;
+    left: -10px;
+    font-size: 25px;
+    color: #FFFFFF;
+}

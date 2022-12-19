@@ -1,0 +1,11 @@
+.current-city__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.current-city__title  {
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: 30px;
+}
