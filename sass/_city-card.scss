@@ -46,11 +46,10 @@
     color: #FFFFFF;
 }
 .card-icon {
-    position: absolute ; 
     min-width: 150px;
     min-height: 150px;
-    top: 40px;
-    left: 220px;
+    transform: translateX(100px);
+    
 }
 .units {
     position: relative;
